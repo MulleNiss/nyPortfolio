@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spil og Leg </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+    <link rel="icon" type="image/png" href="Billider/"> 
+    <link rel="stylesheet" href="nyStyle.css">
+<style>
+
+.container {
+     width: 100%;
+     height: 100vh;
+     background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(https://cdn.shopify.com/s/files/1/0162/8612/articles/mm_Inputs_drawing_1400x.png?v=1561149704);
+     background-position: center;
+     background-size:  cover;
+     background-attachment: fixed;
+     padding-left: 5%;
+     padding-right: 5%;
+     box-sizing: border-box;
+     position: relative;
+        }
+
+.row-2{
+    display: flex;
+    height: auto;
+    padding-top: 22%;
+    padding-bottom: 2%;
+}
+
+.image{
+    background-image: url(solbilled1.png);
+    background-size: cover;
+    height: 250px;
+    width: 500px;
+    border-radius: 20px;
+    }
+.image2{
+    background-image: url(solbilled2.png);
+    background-size: cover;
+    height: 450px;
+    width: 700px;
+    border-radius: 20px;
+    }
+.image3{
+    background-image: url(solkode1.png);
+    background-size: cover;
+    height: 500px;
+    width: 660px;
+    border-radius: 20px;
+    }
+    </style>  
+</head>
+    
+<body>
+    <div class="container"> 
+        
+        <div class="Kartotekskort"><center><img src="AstroPiBilleder/Pil.png" class="Kartotekskort-Pil"></center></div>
+        
+        <div class="navbar">
+            <nav>
+                <ul>
+                    <li><a href="index1.html">Portfolie</a></li>
+                    <li><a href="webTeknologier1.html">Webteknologier</a></li>
+                    <li><a href="itSikkerhed1.html">IT-sikkerhed</a></li>
+                    <li><a href="AstroPiPortfoli.html">Astro Pi</a></li>
+                    <li><a href="spilOgLeg.html">Spil og Leg</a></li>
+                    <li><a href="database.html">Databaser</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        
+        <div class="row">
+            <div class="col">
+               <h1>Spil og Leg</h1>
+                <p> I "spil, leg og samarbejde" forløbet har vi arbejdet på at skabe et computerspil fra bunden, som dog ikke må kunne styres med kun en computer. Derfor har vi også arbejdet med en "Makey Makey": et praktisk interface der kommunikerer med computeren på samme måde som et keyboard, men hvor den ved hjælp af svage elektriske kredsløb kan skabe inputs fra stort set hvad som helst. Derudover har vi programmeret selve spillet i sproget python.  </p>
+            </div>
+        </div>
+        
+        
+        <div class="row-2">
+            <div class="col-2">
+               <h1-2>Vores Ide til forløbet spil og leg</h1-2>
+               <br>
+               <p-2>Vi har trukket inspiration fra genren "fighting games", som for eksempel det populære "Street Fighter". Vi tænkte, at vi ville tage en meget forsimplet version af denne type spil, og forsøge at bringe det ud i 3D-verdenen. </p-2>
+            </div>
+        </div>
+        
+        
+        <div class="row-3">
+            <div class="col-3">
+               <h1-2>Spillet</h1-2>
+               <br>
+               <p-2>For at bringe spillet ud i 3D-verdenen har vi brugt en makeymakey. Denne gør at man kan tilslutte diverse fysiske objekter og bruge dem som taster i spillet, ved at der bliver dannet et elektrist kredsløb. </p-2>
+                <br><br>
+               <p-2>Spillet fungerer således: der er 2 spillere ad gangen. Hver spiller har et "sværd", som man kan bruge til at slå den anden. Hver gang et slag rammer, mister modstanderen to HP (health points). Derudover kan man også bruge et "special attack" som gør 5 skade på modstanderen. Efter hvert "special attack" er der en cooldown periode på et antal sekunder før spilleren kan bruge det igen. Når ens modstander ikke har flere HP tilbage, er spillet ovre</p-2>
+            </div>
+            <div class="col-img">
+               <div class="image"></div>
+                <br>
+            </div>
+        </div>
+        
+        
+        <h1-2>Viderudvikling efter første playtest</h1-2>
+        <div class="row-4">
+            <div class="col-img2">
+               <div class="image2"></div>
+            </div>
+            <div class="col-4">
+               <br>
+               <p-2>Efter vores play-test af spillet, fandt vi en del problemer ved den praktiske udførsel af spillet. Først og fremmest, er opstilling besværlig og tidskrævende. Det tager lang tid at tilslutte alt til makeymakey'en og det er svært at lave "rustningen" eftersom at den kun dækker én del af kroppen - torsoen. Hvis den f.eks. også skulle dække armene ville det kræven flere ledninger som skulle tilsluttes til ground. Ledningerne er i forvejen et problem, da fylder meget og derfor falder nemt ned fra sværdene og rustningerne, og dermed stopper spillet. Sværdet består stortset kun af sølvpapir, hvilket betyder at det nemt knækker og gør det svært at spille. Derudover skal det bemærkes at "special attacks" endnu ikke fungerer i praksis, hvilket fjerner en stor del af spillet.
+                <br><br>
+                I billedet til venstre, ses problemet med at sværdet ikke er stabilt nok, dette fik vi dog fikset nogenlunde til vores visning af spillet. Her havde vi gjort sværdene mere stabile ved brug af mere papir. Vi prøvede også at lave sværd med en hård kerne, men dette gjorde at man slog for hårdt.
+                
+                </p-2>
+            </div>
+        </div>
+        <div class="row-5">
+            <div class="col">
+               <br>
+               <h1-2>Lidt af koden</h1-2><br>
+               <p-2>Selve funktionen DMG1_sleep bliver kørt når man aktiverer sin speciel ability. Til at starte med bliver t2 definiret som tiden der er gået fra starten af programmet. Førhen i koden bliver t1 og t2 sat lig hinanden, men t2 bliver ved med at tælle op. Derefter spørger koden om t2 er 3000 millisekunder større end t1, og hvis den er dette bliver skade variablen sat til 2 som er standard igen, dermed er special abilityen udløbet. </p-2>
+                <br><br>
+               <p-2>Det andet if loop sørger for at der er gået 10 sekunder mellem hver aktivering af special abilityen. Når man aktivere sin special ability bliver variablen klikket sat til 1, og for at man kan aktivere sin special ability skal denne være 0, og dette bkiver den sat til efter 13000 millisekunder.
+                <br><br>
+                Det sidste if loop tegner en rektangel som viser cooldownet på special abilityen, dette gør den ved at trække en brøkdel af forskellen mellem t1 og t2 fra længden af en rektangel, og dette bliver den så ved med indtil at cooldownet på special abilityen så er udløbet, og dermed er klar til at blive aktiveret igen.
+                </p-2>
+            </div>
+             <div class="col-img3">
+                 <br>
+               <div class="image3"></div>
+            </div>
+        </div>
+        <br>
+        <center><h1-2>Flowchart</h1-2></center>
+        <div class="row-5">
+            <img class="Flowchart" src="flowchartsp.png">
+        </div>
+    </div>            
